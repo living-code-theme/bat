@@ -1,6 +1,6 @@
 // Shared TextMate scope → Living Code role table. The canonical copy lives in
-// living-code-theme/tmtheme (src/scopes.mjs); living-code-theme/sublime keeps a byte-identical copy and its CI
-// fails when the two drift. Edit the tmtheme copy first, then copy it to sublime unchanged.
+// living-code-theme/bat (src/scopes.mjs); living-code-theme/sublime keeps a byte-identical copy and its CI
+// fails when the two drift. Edit the bat copy first, then copy it to sublime unchanged.
 
 export const SCOPES = [
   { role: "comment", scope: ["comment", "punctuation.definition.comment", "string.quoted.docstring"] },

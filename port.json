@@ -2,14 +2,13 @@
   "$schema": "https://living-code.dev/port.schema.json",
   "schemaVersion": 1,
   "name": "bat",
-  "slug": "tmtheme",
+  "slug": "bat",
   "group": "CLI & TUI",
   "emoji": "🦇",
   "description": "Living Code for bat: TextMate .tmTheme syntax themes, also used by delta, in four color flavors.",
   "homepage": "https://github.com/sharkdp/bat",
   "quick": "Install the tmTheme files into bat",
   "aliases": [
-    "bat",
     "tmtheme",
     "textmate",
     "syntect"

@@ -1,5 +1,5 @@
 {
-  "name": "living-code-tmtheme",
+  "name": "living-code-bat",
   "version": "0.1.1",
   "description": "Living Code for bat: TextMate .tmTheme syntax themes, also used by delta, in four color flavors.",
   "type": "module",
@@ -7,9 +7,9 @@
   "author": "Living Code",
   "repository": {
     "type": "git",
-    "url": "https://github.com/living-code-theme/tmtheme.git"
+    "url": "https://github.com/living-code-theme/bat.git"
   },
-  "homepage": "https://github.com/living-code-theme/tmtheme",
+  "homepage": "https://github.com/living-code-theme/bat",
   "private": true,
   "packageManager": "pnpm@12.9.0",
   "engines": {
