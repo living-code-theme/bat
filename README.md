@@ -3,9 +3,9 @@
 
 <a href="https://living-code.dev"><img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/brand/favicon.svg" width="64" height="64" alt="Living Code [lc] mark"></a>
 
-# 🦇 Living Code for bat · delta (tmTheme)
+# 🦇 Living Code for bat
 
-**Calm slate. Living color.**<br>Living Code for bat · delta (tmTheme). Repository-owned theme files, installation instructions and four color flavors.
+**Calm slate. Living color.**<br>Living Code for bat: TextMate .tmTheme syntax themes, also used by delta, in four color flavors.
 
 <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/00a692.svg" width="14" height="14" alt="teal #00a692"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/52d7c1.svg" width="14" height="14" alt="mint #52d7c1"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/9ae0dd.svg" width="14" height="14" alt="aqua #9ae0dd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/80b6d3.svg" width="14" height="14" alt="steel #80b6d3"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/8acb83.svg" width="14" height="14" alt="moss #8acb83"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/f0be6d.svg" width="14" height="14" alt="amber #f0be6d"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e18c5f.svg" width="14" height="14" alt="copper #e18c5f"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/e96560.svg" width="14" height="14" alt="flare #e96560"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/bf91cd.svg" width="14" height="14" alt="orchid #bf91cd"> <img src="https://raw.githubusercontent.com/living-code-theme/core/main/assets/swatches/ddaec3.svg" width="14" height="14" alt="rose #ddaec3">
 
@@ -24,21 +24,21 @@
 <tr>
 <td width="50%" valign="top">
 <strong>Night</strong><br><sub>Dark · full palette</sub><br><br>
-<a href="images/night.png"><img src="images/night.png" alt="bat · delta (tmTheme) running Living Code Night" width="640"></a>
+<a href="images/night.png"><img src="images/night.png" alt="bat running Living Code Night" width="640"></a>
 </td>
 <td width="50%" valign="top">
 <strong>Frost</strong><br><sub>Dark · softer chroma</sub><br><br>
-<a href="images/frost.png"><img src="images/frost.png" alt="bat · delta (tmTheme) running Living Code Frost" width="640"></a>
+<a href="images/frost.png"><img src="images/frost.png" alt="bat running Living Code Frost" width="640"></a>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 <strong>Paper</strong><br><sub>Light · near-white slate</sub><br><br>
-<a href="images/paper.png"><img src="images/paper.png" alt="bat · delta (tmTheme) running Living Code Paper" width="640"></a>
+<a href="images/paper.png"><img src="images/paper.png" alt="bat running Living Code Paper" width="640"></a>
 </td>
 <td width="50%" valign="top">
 <strong>Signal</strong><br><sub>Dark · teal accent</sub><br><br>
-<a href="images/signal.png"><img src="images/signal.png" alt="bat · delta (tmTheme) running Living Code Signal" width="640"></a>
+<a href="images/signal.png"><img src="images/signal.png" alt="bat running Living Code Signal" width="640"></a>
 </td>
 </tr>
 </table>
@@ -47,16 +47,24 @@ Select any preview to view the image at full size.
 
 ## Installation
 
-**bat / delta**
+Requires [bat](https://github.com/sharkdp/bat). Download the four themes into bat's theme folder and rebuild its cache:
 
 ```sh
 curl -fsSL --create-dirs --output-dir "$(bat --config-dir)/themes" -O "https://raw.githubusercontent.com/living-code-theme/tmtheme/main/living-code-{night,frost,paper,signal}.tmTheme" && bat cache --build
 bat --list-themes | grep living-code
 ```
 
-Then `--theme="living-code-night"` in `$(bat --config-dir)/config`, and `syntax-theme = living-code-night` under `[delta]` in `~/.gitconfig`. For delta's diff backgrounds, headers and gutters, also use the dedicated [delta port](https://github.com/living-code-theme/delta).
+Then pick a flavor with `--theme`, or make it the default in `$(bat --config-dir)/config`:
 
-**Sublime Text** has its own native color scheme: use the dedicated [Sublime Text port](https://github.com/living-code-theme/sublime). The `.tmTheme` files are kept for bat and delta.
+```sh
+echo '--theme="living-code-night"' >> "$(bat --config-dir)/config"
+```
+
+**delta** reads its syntax themes from bat's cache. Use the [delta port](https://github.com/living-code-theme/delta): its install also adds these themes, and each delta flavor selects the matching syntax theme together with diff backgrounds, headers and gutters.
+
+**Sublime Text** has its own native color scheme: use the [Sublime Text port](https://github.com/living-code-theme/sublime).
+
+**Other tmTheme readers** (TextMate, syntect-based tools) can load the same `living-code-*.tmTheme` files directly.
 
 ## Flavors
 
@@ -65,7 +73,7 @@ Expand a flavor for its full-size preview and activation instructions.
 <details data-lc-flavor="night">
 <summary><strong>Night</strong> · Dark · full palette</summary>
 
-<p><a href="images/night.png"><img src="images/night.png" alt="bat · delta (tmTheme) running Living Code Night" width="1280"></a></p>
+<p><a href="images/night.png"><img src="images/night.png" alt="bat running Living Code Night" width="1280"></a></p>
 
 After installing the themes and rebuilding bat's cache:
 
@@ -73,14 +81,13 @@ After installing the themes and rebuilding bat's cache:
 bat --theme="living-code-night"
 ```
 
-For delta, set `syntax-theme = living-code-night` under `[delta]`.
 
 </details>
 
 <details data-lc-flavor="frost">
 <summary><strong>Frost</strong> · Dark · softer chroma</summary>
 
-<p><a href="images/frost.png"><img src="images/frost.png" alt="bat · delta (tmTheme) running Living Code Frost" width="1280"></a></p>
+<p><a href="images/frost.png"><img src="images/frost.png" alt="bat running Living Code Frost" width="1280"></a></p>
 
 After installing the themes and rebuilding bat's cache:
 
@@ -88,14 +95,13 @@ After installing the themes and rebuilding bat's cache:
 bat --theme="living-code-frost"
 ```
 
-For delta, set `syntax-theme = living-code-frost` under `[delta]`.
 
 </details>
 
 <details data-lc-flavor="paper">
 <summary><strong>Paper</strong> · Light · near-white slate</summary>
 
-<p><a href="images/paper.png"><img src="images/paper.png" alt="bat · delta (tmTheme) running Living Code Paper" width="1280"></a></p>
+<p><a href="images/paper.png"><img src="images/paper.png" alt="bat running Living Code Paper" width="1280"></a></p>
 
 After installing the themes and rebuilding bat's cache:
 
@@ -103,14 +109,13 @@ After installing the themes and rebuilding bat's cache:
 bat --theme="living-code-paper"
 ```
 
-For delta, set `syntax-theme = living-code-paper` under `[delta]`.
 
 </details>
 
 <details data-lc-flavor="signal">
 <summary><strong>Signal</strong> · Dark · teal accent</summary>
 
-<p><a href="images/signal.png"><img src="images/signal.png" alt="bat · delta (tmTheme) running Living Code Signal" width="1280"></a></p>
+<p><a href="images/signal.png"><img src="images/signal.png" alt="bat running Living Code Signal" width="1280"></a></p>
 
 After installing the themes and rebuilding bat's cache:
 
@@ -118,17 +123,16 @@ After installing the themes and rebuilding bat's cache:
 bat --theme="living-code-signal"
 ```
 
-For delta, set `syntax-theme = living-code-signal` under `[delta]`.
 
 </details>
 
 ## Configuration
 
-See [bat · delta (tmTheme)'s documentation](https://github.com/sharkdp/bat) for application settings and reload behavior. The activation instructions above identify each supported flavor; keep your other application configuration.
+See [bat's documentation](https://github.com/sharkdp/bat#adding-new-themes) for application settings and reload behavior. Rerun `bat cache --build` after updating the theme files. The activation instructions above identify each supported flavor; keep your other application configuration.
 
 ## Compatibility
 
-This port supplies theme files for bat · delta (tmTheme), not the application itself. Install the application separately and follow the installation instructions for its supported configuration format.
+This port supplies TextMate `.tmTheme` files, not bat itself. bat and delta load them from bat's theme cache; any other tmTheme reader can use the files directly.
 
 ## Contributing
 

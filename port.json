@@ -1,15 +1,18 @@
 {
   "$schema": "https://living-code.dev/port.schema.json",
   "schemaVersion": 1,
-  "name": "bat · delta (tmTheme)",
+  "name": "bat",
   "slug": "tmtheme",
-  "group": "Editors",
+  "group": "CLI & TUI",
   "emoji": "🦇",
-  "description": "Living Code for bat · delta (tmTheme). Repository-owned theme files, installation instructions and four color flavors.",
+  "description": "Living Code for bat: TextMate .tmTheme syntax themes, also used by delta, in four color flavors.",
   "homepage": "https://github.com/sharkdp/bat",
-  "quick": "See installation instructions",
+  "quick": "Install the tmTheme files into bat",
   "aliases": [
-    "tmtheme"
+    "bat",
+    "tmtheme",
+    "textmate",
+    "syntect"
   ],
   "flavors": [
     "night",
@@ -27,22 +30,22 @@
     {
       "flavor": "night",
       "path": "images/night.png",
-      "alt": "bat · delta (tmTheme) running Living Code Night"
+      "alt": "bat running Living Code Night"
     },
     {
       "flavor": "frost",
       "path": "images/frost.png",
-      "alt": "bat · delta (tmTheme) running Living Code Frost"
+      "alt": "bat running Living Code Frost"
     },
     {
       "flavor": "paper",
       "path": "images/paper.png",
-      "alt": "bat · delta (tmTheme) running Living Code Paper"
+      "alt": "bat running Living Code Paper"
     },
     {
       "flavor": "signal",
       "path": "images/signal.png",
-      "alt": "bat · delta (tmTheme) running Living Code Signal"
+      "alt": "bat running Living Code Signal"
     }
   ]
 }
